@@ -21,7 +21,7 @@ jobs:
       run: |
         echo "$SSH_PRIVATE_KEY" > private_key.pem
         chmod 600 private_key.pem
-        ssh -i private_key.pem -o StrictHostKeyChecking=no $USERNAME@$HOST "docker exec -it  frappe /home/frappe/reload.sh"
+        ssh -i private_key.pem -o StrictHostKeyChecking=no $USERNAME@$HOST "docker exec -i  frappe /home/frappe/reload.sh"
 
     # Clean up the private key
     - name: Clean up
