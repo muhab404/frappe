@@ -10,7 +10,6 @@ class Node(Document):
 	pass
 @frappe.whitelist(allow_guest=True)
 def get_context(target_context_id, parent_context_id=None):
-	print("parent",parent_context_id)
 	node_content_id = "65352e8bb290b062d72d4c43"
 	if parent_context_id:
 		context_node = frappe.get_doc("Node", target_context_id)
@@ -24,17 +23,16 @@ def get_context(target_context_id, parent_context_id=None):
 		target_context_node_content =json.loads( requests.get(url+node_content_id)._content)
 		if target_context_node_content["node_ids"]:
 			node_ids_content = []
-			print("before loop")
 			for node_id in target_context_node_content["node_ids"]:
-				print("after loop", node_id)
 				node = frappe.get_doc("Node", node_id)
-				print(node)
 				node_content_id = json.loads(node.contexts)[target_context_id]
-				print(node_content_id)
 				node_content =json.loads(requests.get(url+node_content_id)._content)
-				print(node_content)
-				node_ids_content.append(node_content)			
-			print("node ids array after get contents",node_ids_content)
+				final_shape = {
+					"node_id": node_id,
+					"node_type": node.node_type,
+					"node_content": node_content
+				}
+				node_ids_content.append(final_shape)			
 			target_context_node_content["node_ids"] = node_ids_content
 		if "relations" in target_context_node_content["properties"]:
 			relations = []
