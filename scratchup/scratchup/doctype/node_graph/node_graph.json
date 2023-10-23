@@ -1,37 +1,48 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-10-03 00:21:25.954021",
+ "autoname": "NG-.#####",
+ "creation": "2023-10-04 08:38:48.372098",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "node_type",
-  "contexts"
+  "type",
+  "label",
+  "position"
  ],
  "fields": [
   {
-   "fieldname": "node_type",
+   "fieldname": "type",
    "fieldtype": "Select",
-   "label": "Node Type",
-   "options": "node\ncontext",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "input\noutput\ncustom",
    "reqd": 1
   },
   {
-   "fieldname": "contexts",
+   "fieldname": "label",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Contexts",
+   "label": "Label",
+   "reqd": 1
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "JSON",
+   "in_list_view": 1,
+   "label": "Position",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-22 16:23:49.471877",
+ "modified": "2023-10-04 15:54:58.736926",
  "modified_by": "Administrator",
  "module": "Scratchup",
- "name": "Node",
+ "name": "Node Graph",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,0 +1,93 @@
+{
+    // Database Design
+    // 1- Eng.Maged Approach
+    "Node Table": {
+        "id": 324535,
+        "nodeType": "Tag",
+        "contextsIds": [
+            1,
+            3,
+            43,
+            45,
+            6
+        ],
+        "contentId": 0
+    },
+    "Node Content Table": {
+        "0": {
+            "text": "original"
+        },
+        "4": {
+            "text": "this for marketing"
+        },
+        "3": {
+            "text": "this for finance"
+        },
+        "1": {
+            "text": "this for development"
+        }
+    },
+    "Context Table": {},
+    // ====================================================== //
+    //Eng.Omar Approach
+    // Node Type => Context, Attribute, Block
+    "Node one": {
+        "type": "block",
+        "properties": {
+            "title": "block one"
+        }
+    },
+    "Node two": {
+        "type": "block",
+        "properties": {
+            "title": "block two"
+        }
+    },
+    "Node three": {
+        "type": "context",
+        "properties": {
+            "title": "context one"
+        }
+    },
+    "Node four": {
+        "type": "Attribute",
+        "properties": {
+            "connection": [
+                "block one id",
+                "block two id"
+            ],
+            "connection type": "later",
+            "contextId": "context one id"
+        },
+        // -----------------------------
+        "Node one": {
+            "type": "block",
+            "properties": {
+                "title": "block one"
+            }
+        },
+        "Node two": {
+            "type": "block",
+            "properties": {
+                "title": "block two"
+            }
+        },
+        "Node three": {
+            "type": "context",
+            "properties": {
+                "title": "context one"
+            }
+        },
+        "Node four": {
+            "type": "Attribute",
+            "properties": {
+                "connection": [
+                    "block one id",
+                    "block two id"
+                ],
+                "connection type": "later",
+                "contextId": "context one id"
+            }
+        }
+    }
+}

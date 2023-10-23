@@ -1,37 +1,36 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-10-03 00:21:25.954021",
+ "creation": "2023-10-05 21:17:17.170594",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "node_type",
-  "contexts"
+  "type",
+  "properties"
  ],
  "fields": [
   {
-   "fieldname": "node_type",
+   "fieldname": "type",
    "fieldtype": "Select",
-   "label": "Node Type",
-   "options": "node\ncontext",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "context\nblock\nattribute",
    "reqd": 1
   },
   {
-   "fieldname": "contexts",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Contexts",
-   "reqd": 1
+   "fieldname": "properties",
+   "fieldtype": "JSON",
+   "label": "Properties"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-22 16:23:49.471877",
+ "modified": "2023-10-05 22:07:00.835378",
  "modified_by": "Administrator",
- "module": "Scratchup",
- "name": "Node",
+ "module": "Omar Perspective",
+ "name": "Node Omar",
  "owner": "Administrator",
  "permissions": [
   {

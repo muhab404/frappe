@@ -1,37 +1,29 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-10-03 00:21:25.954021",
+ "autoname": "C-.#####",
+ "creation": "2023-10-05 17:33:00.982858",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "node_type",
-  "contexts"
+  "versions"
  ],
  "fields": [
   {
-   "fieldname": "node_type",
-   "fieldtype": "Select",
-   "label": "Node Type",
-   "options": "node\ncontext",
-   "reqd": 1
-  },
-  {
-   "fieldname": "contexts",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Contexts",
-   "reqd": 1
+   "fieldname": "versions",
+   "fieldtype": "JSON",
+   "label": "Versions"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-22 16:23:49.471877",
+ "modified": "2023-10-05 18:47:08.585662",
  "modified_by": "Administrator",
- "module": "Scratchup",
- "name": "Node",
+ "module": "Maged Perspective",
+ "name": "Node Content Maged",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

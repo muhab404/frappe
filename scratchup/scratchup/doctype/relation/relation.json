@@ -1,37 +1,47 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-10-03 00:21:25.954021",
+ "creation": "2023-10-22 21:43:10.861395",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "node_type",
-  "contexts"
+  "source",
+  "target",
+  "relation_type"
  ],
  "fields": [
   {
-   "fieldname": "node_type",
-   "fieldtype": "Select",
-   "label": "Node Type",
-   "options": "node\ncontext",
+   "fieldname": "source",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Source",
+   "options": "Node",
    "reqd": 1
   },
   {
-   "fieldname": "contexts",
+   "fieldname": "target",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target",
+   "options": "Node",
+   "reqd": 1
+  },
+  {
+   "fieldname": "relation_type",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Contexts",
+   "label": "Relation Type",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-22 16:23:49.471877",
+ "modified": "2023-10-22 21:43:10.861395",
  "modified_by": "Administrator",
  "module": "Scratchup",
- "name": "Node",
+ "name": "Relation",
  "owner": "Administrator",
  "permissions": [
   {
